@@ -2,7 +2,7 @@ import React from 'react';
 import backgroundImage from '../assets/background.jpg';
 import Socials from './socials';
 import Navbar from './Navbar';
-
+import Content from './Content';
 const Home = () => {
     return (
       <div
@@ -13,7 +13,13 @@ const Home = () => {
         <Socials />
         <br/>
         <Navbar/>
+        <div className='content mt-10'>
+          <Content/>
+ 
+
       </div>
+      </div>
+      
       </div>
 
     );

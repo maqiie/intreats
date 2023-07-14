@@ -1,0 +1,26 @@
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    margin: 0 10px;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 4px;
+
+  }
+  
+  .icons a {
+    text-decoration: none;
+  }
+  
+  .contact-info {
+    /* display: flex;
+    gap: 4px; */
+    color: white;
+    /* margin-left: auto; */
+    float: right;
+  }
+  
