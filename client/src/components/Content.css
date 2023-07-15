@@ -1,0 +1,90 @@
+.Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: center;
+    height: 100vh;
+  width: 100vw;
+    
+  }
+  .Content hr {
+    width: 50%;
+    height: 1px;
+    margin: 8px 0;
+    background-color: #ccc;
+    border: none;
+  }
+  .text{
+    font-size:.9rem!important;
+    line-height:150%;
+    color:#f7f7f7;
+    text-align: center;
+    
+
+
+  }
+  .theme{
+    align-items: center;
+    justify-content:center ;
+  }
+  .btn-text {
+    z-index: 2;
+  }
+  
+  .button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.6em 2em;
+    border: mediumspringgreen solid 0.15em;
+    border-radius: 0.25em;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+  }
+  
+  .button:hover {
+    color: #212121;
+  }
+  
+  .button:active {
+    border-color: teal;
+  }
+  
+  .btn-circle {
+    position: absolute;
+    width: 9em;
+    aspect-ratio: 1;
+    background: rgb(197, 168, 36);
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+  }
+  
+  .btn-circle:nth-child(1) {
+    left: 0;
+    transform: translateX(-8em);
+  }
+  
+  .btn-circle:nth-child(2) {
+    right: 0;
+    transform: translateX(8em);
+  }
+  
+  .button:hover .btn-circle:nth-child(1) {
+    transform: translateX(-1em);
+  }
+  
+  .button:hover .btn-circle:nth-child(2) {
+    transform: translateX(1em);
+  }
+  
+  .button:active .btn-circle {
+    background: teal;
+  }
