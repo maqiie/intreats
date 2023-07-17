@@ -1,0 +1,90 @@
+.category {
+  background-color: beige;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.maandazi,
+.Pizza,
+.Cakes,
+.Dohnuts {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+
+.category h1 {
+  margin-bottom: 20px;
+  font-size: 36pt;
+  text-align: center;
+  color: #000000;
+  padding-top: 80px;
+  letter-spacing: -1px;
+  word-wrap: break-word;
+  line-height: 0.9em;
+  position: relative;
+  font-weight: bold;
+}
+
+.category .pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.category img {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+.category p {
+  font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+    /* Large screens */
+    .category {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+  
+    .category .pair {
+      display: initial;
+    }
+  
+    .category img {
+      width: 100%; /* Adjust the width as needed */
+      /* Add any additional styling you want for the image */
+    }
+  }
+  
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Medium screens */
+  .category .pair {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Adjust the gap value as per your preference */
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    /* Center the pairs horizontally */
+    /* Add any additional styling you want for the pairs */
+  }
+}
+
+@media (max-width: 600px) {
+  /* Small screens */
+  .category .pair {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* Add any additional styling you want for the pairs */
+  }
+}
