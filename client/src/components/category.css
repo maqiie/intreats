@@ -3,23 +3,18 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
+  text-align: center;
 }
 
-.maandazi,
-.Pizza,
-.Cakes,
-.Dohnuts {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  display: block;
+.category p {
+  white-space: pre-line!important;
+  font-weight: bold;
 }
 
 .category h1 {
   margin-bottom: 20px;
   font-size: 36pt;
-  text-align: center;
   color: #000000;
   padding-top: 80px;
   letter-spacing: -1px;
@@ -29,62 +24,149 @@
   font-weight: bold;
 }
 
+.category .text {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+.category .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.category .maandazi,
+.category .Dohnuts,
+.category .Pizza,
+.category .Cakes {
+  width: 100%;
+  max-width: 200px;
+}
+
 .category .pair {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  justify-items: center;
 }
 
 .category img {
   border-radius: 50%;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  transition: transform 0.3s ease;
 }
 
-.category p {
-  font-weight: bold;
-  text-align: center;
-}
-@media (min-width: 1200px) {
-    /* Large screens */
-    .category {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      align-items: center;
-    }
-  
-    .category .pair {
-      display: initial;
-    }
-  
-    .category img {
-      width: 100%; /* Adjust the width as needed */
-      /* Add any additional styling you want for the image */
-    }
-  }
-  
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* Medium screens */
-  .category .pair {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px; /* Adjust the gap value as per your preference */
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-    /* Center the pairs horizontally */
-    /* Add any additional styling you want for the pairs */
-  }
+.category img:hover {
+  transform: scale(1.1);
 }
 
-@media (max-width: 600px) {
+.category p:hover {
+  color: red;
+}
+
+@media (max-width: 767px) {
   /* Small screens */
-  .category .pair {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    /* Add any additional styling you want for the pairs */
+  .category .images {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .category .maandazi,
+  .category .Dohnuts,
+  .category .Pizza,
+  .category .Cakes {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 540px) {
+  /* Medium screens */
+  .category .images {
+    justify-content: flex-start;
+  }
+
+  .category .maandazi,
+  .category .Dohnuts,
+  .category .Pizza,
+  .category .Cakes {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Large screens */
+  .category .images {
+    flex-wrap: nowrap;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .category .pair {
+    display: initial;
+  }
+
+  .category .maandazi,
+  .category .Dohnuts,
+  .category .Pizza,
+  .category .Cakes {
+    width: auto;
+  }
+}
+
+
+
+/* <------------button--------> */
+button {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color:beige;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: beige;
+  transition: 0.5s;
+}
+
+button:hover::before, button:hover::after {
+  transform: scale(0)
+}
+
+button:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
 }

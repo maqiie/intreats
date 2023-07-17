@@ -1,27 +1,66 @@
 
+// import React from 'react';
+// import { Styles } from './App.css';
+// import backgroundImage from './assets/background.jpg';
+// import Socials from './components/socials';
+// import Navbar from './components/Navbar';
+// import Content from './components/Content';
+// import Category from './components/Category'
+
+// const App = () => {
+//   const backgroundStyle = {
+//     backgroundImage: `url(${process.env.PUBLIC_URL}${backgroundImage})`,
+//     backgroundSize: 'cover',
+//     backgroundPosition: 'center',
+//   };
+
+//   return (
+//     <div className="App" style={backgroundStyle}>
+//       <Socials />
+//       <Navbar />
+//       <div className="content-wrapper">
+//         <Content />
+//       </div>
+//       {/* <Category /> */}
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from './components/home';
+import backgroundImage from './assets/background.jpg';
 import Socials from './components/socials';
 import Navbar from './components/Navbar';
 import Content from './components/Content';
-import Contact from './components/Contact';
 import Category from './components/Category';
+import Ad from './components/Ad';
 
-function App() {
+const App = () => {
+  const backgroundStyle = {
+    backgroundImage: `url(${process.env.PUBLIC_URL}${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+  };
+
   return (
-  
-    <Router>
-      <Routes>
-      
-        <Route path="/" element={<Home/>}/>
-        <Route path="/social" element={<Socials />}/>
-        <Route path="/content" element={<Content/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/category" element={<Category/>}/>
-      </Routes>
-    </Router>
+    <div className="App">
+      <div className="background" style={backgroundStyle}>
+        <Socials />
+        <Navbar />
+        <div className="content-wrapper">
+          <Content />
+        </div>
+      </div>
+      <Category />
+      <br/>
+      <Ad/>
+    </div>
   );
-}
+};
 
 export default App;
