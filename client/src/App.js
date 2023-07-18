@@ -36,6 +36,7 @@ import Navbar from './components/Navbar';
 import Content from './components/Content';
 import Category from './components/Category';
 import Ad from './components/Ad';
+import Newsletter from './components/Newsletter';
 
 const App = () => {
   const backgroundStyle = {
@@ -57,8 +58,9 @@ const App = () => {
         </div>
       </div>
       <Category />
-      <br/>
+      {/* <br/> */}
       <Ad/>
+      <Newsletter/>
     </div>
   );
 };

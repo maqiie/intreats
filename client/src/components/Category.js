@@ -52,6 +52,7 @@ const Category = () => {
       <br/>
       <div>
       <button>View Full Menu</button>
+      <br/>
       </div>
     
     </div>
