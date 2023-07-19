@@ -51,7 +51,7 @@ const Category = () => {
       </div>
       <br/>
       <div>
-      <button>View Full Menu</button>
+      <button  >View Full Menu</button>
       <br/>
       </div>
     
