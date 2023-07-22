@@ -121,7 +121,7 @@
 
 
 /* <------------button--------> */
-button {
+button.category-button {
   width: 10em;
   position: relative;
   height: 3.5em;
@@ -139,19 +139,19 @@ button {
   margin: 0 auto;
 }
 
-button::after {
+button.category-button::after {
   content: "";
   position: absolute;
   top: -10px;
   left: 3%;
   width: 95%;
   height: 40%;
-  background-color:beige;
+  background-color: beige;
   transition: 0.5s;
   transform-origin: center;
 }
 
-button::before {
+button.category-button::before {
   content: "";
   transform-origin: center;
   position: absolute;
@@ -163,10 +163,11 @@ button::before {
   transition: 0.5s;
 }
 
-button:hover::before, button:hover::after {
-  transform: scale(0)
+button.category-button:hover::before,
+button.category-button:hover::after {
+  transform: scale(0);
 }
 
-button:hover {
+button.category-button:hover {
   box-shadow: inset 0px 0px 25px #1479EA;
 }

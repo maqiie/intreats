@@ -1,4 +1,3 @@
-
 // import React from 'react';
 // import { Styles } from './App.css';
 // import backgroundImage from './assets/background.jpg';
@@ -28,24 +27,24 @@
 
 // export default App;
 
-import React from 'react';
-import './App.css';
-import backgroundImage from './assets/background.jpg';
-import Socials from './components/socials';
-import Navbar from './components/Navbar';
-import Content from './components/Content';
-import Category from './components/Category';
-import Ad from './components/Ad';
-import Newsletter from './components/Newsletter';
+import React from "react";
+import "./App.css";
+import backgroundImage from "./assets/background.jpg";
+import Socials from "./components/socials";
+import Navbar from "./components/Navbar";
+import Content from "./components/Content";
+import Category from "./components/Category";
+import Ad from "./components/Ad";
+import Newsletter from "./components/Newsletter";
 
 const App = () => {
   const backgroundStyle = {
     backgroundImage: `url(${process.env.PUBLIC_URL}${backgroundImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
   };
 
   return (
@@ -58,8 +57,8 @@ const App = () => {
         </div>
       </div>
       <Category />
-      {/* <br/> */}
-      <Ad/>
+
+      <Ad />
       <Newsletter/>
     </div>
   );
