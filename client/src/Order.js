@@ -13,7 +13,7 @@ const OrderForm = () => {
       maandaziPiece * 20 +
       doughnutQty * 400 +
       cakeKg * /*price per kg*/ 100 + // Adjust the price per kg as needed for cakes
-      /* customOrder price calculation here */;
+      /* customOrder price calculation here */
 
     // You can use this total price for further processing or display
     console.log('Total Price:', totalPrice);

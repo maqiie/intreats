@@ -1,58 +1,93 @@
-/* Newsletter.css */
-
-/* Global styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+.news{
+  background-color:#fff;
 }
 
-/* Container for cards */
+/* Add a container for the cards */
 .card-container {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
-  margin: 20px;
+  justify-content: center;
+  gap: 20px; /* Gap between the cards */
+  width: 100%; /* Set the container to occupy the full width of the parent element */
+  padding: 20px; /* Add padding to the container */
 }
 
-/* Card styles */
 .card {
-  max-width: 300px;
+  width: 250px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
 }
 
-.card img {
+/* ... (Rest of the CSS rules) ... */
+
+
+.image {
   width: 100%;
-  max-height: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-.card h3 {
-  font-size: 20px;
-  margin-top: 10px;
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.card p {
+p {
   font-size: 16px;
-  margin-top: 5px;
-  color: #555;
+  margin-bottom: 15px;
 }
 
-.card button {
+/* Styling for the dropdown menu */
+.dropdown {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 14px;
 }
 
-.card button:hover {
+button:hover {
   background-color: #0056b3;
 }
+/* Newsletter.css */
+
+/* ... (Previous CSS rules) ... */
+
+.card {
+  /* ... (Previous CSS rules) ... */
+}
+
+.image {
+  /* ... (Previous CSS rules) ... */
+  transition: opacity 0.3s ease; /* Add a transition for smooth hover effect */
+}
+
+/* Add a hover effect to the image */
+.card:hover .image {
+  opacity: 0.8; /* Adjust the opacity value to control the hover effect */
+  
+}
+
+/* ... (Remaining CSS rules) ... */
