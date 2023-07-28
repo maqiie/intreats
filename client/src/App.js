@@ -10,6 +10,7 @@ import Category from "./components/Category";
 import Ad from "./components/Ad";
 import Newsletter from "./components/Newsletter";
 import OrderForm from "./Order";
+import CustomerReviews from "./components/reviews";
 
 const App = () => {
   const backgroundStyle = {
@@ -34,7 +35,8 @@ const App = () => {
 
       <Ad />
       <Newsletter/>
-      <OrderForm/>
+      {/* <OrderForm/> */}
+      {/* <CustomerReviews/> */}
     </div>
   );
 };
