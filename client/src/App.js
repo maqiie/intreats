@@ -9,8 +9,7 @@ import Content from "./components/Content";
 import Category from "./components/Category";
 import Ad from "./components/Ad";
 import Newsletter from "./components/Newsletter";
-import OrderForm from "./Order";
-import CustomerReviews from "./components/reviews";
+import Review from "./components/reviews";
 
 const App = () => {
   const backgroundStyle = {
@@ -26,6 +25,7 @@ const App = () => {
     <div className="App">
       <div className="background" style={backgroundStyle}>
         <Socials />
+      
         <Navbar />
         <div className="content-wrapper">
           <Content />
@@ -35,8 +35,9 @@ const App = () => {
 
       <Ad />
       <Newsletter/>
-      {/* <OrderForm/> */}
-      {/* <CustomerReviews/> */}
+      
+     <Review/>
+     
     </div>
   );
 };

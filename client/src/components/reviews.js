@@ -1,112 +1,87 @@
-// import React from 'react';
-// import { Swiper, SwiperSlide } from 'swiper/react';
+import React from 'react'
+import './reviews.css'
+import AVATR1  from '../assets/avatar1.jpg'
+import AVATR2  from '../assets/avatar2.jpg'
+import AVATR3  from '../assets/avatar3.jpg'
+import AVATR4  from '../assets/avatar4.jpg'
 
-// import 'swiper/swiper-bundle.css';
-// import 'swiper/swiper-bundle.min.css';
-
-// // import 'swiper/swiper.scss'; // Import Swiper styles
-// import 'swiper/components/pagination/pagination.scss'; // Import Swiper pagination styles
-// import 'swiper/components/navigation/navigation.scss'; // Import Swiper navigation styles
-// // import { Swiper, SwiperSlide } from 'react-id-swiper';
-
-// const reviewsData = [
-//   {
-//     id: 1,
-//     name: 'John Doe',
-//     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
-//   },
-//   {
-//     id: 2,
-//     name: 'Jane Smith',
-//     review: 'Ut consequat, augue vel fermentum vestibulum, nisi odio feugiat ex, auctor venenatis tellus.',
-//   },
-//   // Add more reviews here
-// ];
-
-// const CustomerReviews = () => {
-//   const swiperParams = {
-//     spaceBetween: 30,
-//     pagination: {
-//       el: '.swiper-pagination',
-//       clickable: true,
-//     },
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//   };
-
-//   return (
-//     <div>
-//       <h2>Customer Reviews</h2>
-//       <Swiper {...swiperParams}>
-//         {reviewsData.map((review) => (
-//           <SwiperSlide key={review.id}>
-//             <div className="review-card">
-//               <h3>{review.name}</h3>
-//               <p>{review.review}</p>
-//             </div>
-//           </SwiperSlide>
-//         ))}
-//         <div className="swiper-pagination"></div>
-//         <div className="swiper-button-prev"></div>
-//         <div className="swiper-button-next"></div>
-//       </Swiper>
-//     </div>
-//   );
-// };
-
-// export default CustomerReviews;
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import Swiper core and required modules
+import { Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import 'swiper/components/pagination/pagination.min.css';
-import 'swiper/components/navigation/navigation.min.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const reviewsData = [
+// Import Swiper styles
+
+import 'swiper/swiper-bundle.css';
+
+
+
+
+const data =[
   {
-    id: 1,
-    name: 'John Doe',
-    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
+      avatar: AVATR1,
+      name:"makpaul",
+      review: "The project was delivered ahead of schedule and met all our requirements. Great work!",
+      
   },
   {
-    id: 2,
-    name: 'Jane Smith',
-    review: 'Ut consequat, augue vel fermentum vestibulum, nisi odio feugiat ex, auctor venenatis tellus.',
+      avatar: AVATR2 ,
+      name:'Timo',
+      review: "We highly recommend your services to others looking for top-notch programming work.",
+      
   },
-  // Add more reviews here
-];
+  {
+      avatar: AVATR3,
+      name:'Marvo',
+      review:"The solution you provided was very effective and has saved us time and resources."
+       
+  },
+  {
+      avatar: AVATR4,
+      name:'Emmanuel' ,
+      review: "The final product was user-friendly and exceeded our expectations in terms of functionality."
+      ,
+  },
+  
+]
 
-const CustomerReviews = () => {
-  const swiperParams = {
-    spaceBetween: 30,
-    pagination: {
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  };
 
+const Review = () => {
   return (
-    <div>
-      <h2>Customer Reviews</h2>
-      <Swiper {...swiperParams}>
-        {reviewsData.map((review) => (
-          <SwiperSlide key={review.id}>
-            <div className="review-card">
-              <h3>{review.name}</h3>
-              <p>{review.review}</p>
-            </div>
-          </SwiperSlide>
-        ))}
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
+    <section id='review'>
+      <h5>Reviews from clients</h5>
+      <h2>review</h2>
+      
+      <Swiper className="review container__container"
+      // install Swiper modules
+      modules={[ Pagination]}
+      spaceBetween={40}
+      slidesPerView={1}
+      pagination={{ clickable: true }}>
+        
+        {
+          data.map(({avatar, name,review}, index) =>{
+            return(
+              <SwiperSlide key={index} className='testimonial'>
+               <div className="client__avatar">
+               <img src={avatar} alt="AVATAR one" />
+                </div>
+                <h5 className='client__name'>{name}</h5>
+                <small className='client__review'>
+                {review}
+              </small>          
+        </SwiperSlide>
+            )
+          })
+        }
       </Swiper>
-    </div>
-  );
-};
 
-export default CustomerReviews;
+
+
+
+    </section>
+  )
+}
+
+
+export default Review;
