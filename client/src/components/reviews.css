@@ -1,51 +1,22 @@
-.testimonials.container__container{
-  width: 40%;
-  padding-bottom: 4rem;
-  
-
-}
-.client__avatar{
-  width: 4rem;
-  aspect-ratio: 1/1;
-  overflow: hidden;
-  border-radius:50%;
-  margin: 0 auto 1rem;
-  border: 0.4rem solid var(--color-primary-variant);
+/* reviews.css */
+.reviews-container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.testimonial{
-  background:var(--color-bg-variant);
-  text-align: center;
-  padding: 2rem;
-  border-radius: 2rem;
-  user-select: none;
-  
-}
-.client__review{
-  color:var(--color-light);
-  font-weight:300;
-  display: block;
-  width: 80%;
-  margin: 0.8rem auto 0;
-}
-.swiper-pagination-clickable .swiper-pagination-bullet{
-  background: var(--color-primary);
-
+.review-card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
 
-/*==================media queries(medium devices)================= */
-@media screen and (max-width:1024px){
-  .testimonials.container__container{
-      width: 60%;
-  }
+.review-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
-/*==================media queries(small devices)================= */
-@media screen and (max-width:600px){
 
-  .testimonials.container__container{
-      width: var(--container-width-sm);
-  }
-  .client__review{
-      width: var(--container-width-sm);
-  }
+.review-slide {
+  display: flex;
+  justify-content: center;
 }

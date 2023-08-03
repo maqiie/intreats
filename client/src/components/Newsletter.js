@@ -4,8 +4,6 @@ import cakeImage from "../assets/cake.jpg";
 import doughnutsImage from "../assets/doughnuts.jpg";
 import maandaziImage from "../assets/maandazi.jpeg";
 
-
-
 const products = [
   {
     name: "Cake",
@@ -74,16 +72,13 @@ const Newsletter = () => {
   return (
     <div className="news">
       <br></br>
-      <div className="flex items-center justify-center ">
+      <div className="flex-container">
         <h1 className="text-4xl font-bold">Order With Us Now</h1>
-
-        
-        {/* Wrap the <p> tag with the <Link> component */}
-        
-      </div>
-      <a href="/OrderForm">
-          <p>make your custom Order</p>
+        <a href="/OrderForm">
+          <p class="custom-link">make your custom Order</p>
         </a>
+      </div>
+
       <br></br>
       <div className="card-container">
         {products.map((product, index) => (

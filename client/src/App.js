@@ -10,6 +10,7 @@ import Category from "./components/Category";
 import Ad from "./components/Ad";
 import Newsletter from "./components/Newsletter";
 import Review from "./components/reviews";
+import About from "./About";
 
 const App = () => {
   const backgroundStyle = {
@@ -35,8 +36,8 @@ const App = () => {
 
       <Ad />
       <Newsletter/>
-      
-     <Review/>
+      <About/>
+     {/* <Review/> */}
      
     </div>
   );
