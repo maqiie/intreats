@@ -13,7 +13,7 @@ const reviewsData = [
   },
   {
     id: 2,
-    name: "Jane Smith",
+    name: "Jane Smih",
     review: "Great customer service and excellent quality. Will buy again.",
   },
   // Add more review objects here...
