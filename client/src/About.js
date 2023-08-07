@@ -2,7 +2,7 @@ import React from "react";
 import img from "./assets/reviews.jpg";
 import "./about.css";
 
-import { FaFacebook, FaTwitter, FaDribbble, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaTiktok, FaInstagram } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -12,14 +12,21 @@ const About = () => {
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <h6>About</h6>
-              <p class="text-justify">
-                Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative
-                to help the upcoming programmers with the code. Scanfcode
-                focuses on providing the most efficient code or snippets as the
-                code wants to be simple. We will help programmers build up
-                concepts in different programming languages that include C, C++,
-                Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and
-                Algorithm.
+              <p className="text-justify">
+                Injoy Treats is a delightful bakery venture that's all about
+                spreading joy through delectable treats. Our mission is simple:
+                to create a haven for food enthusiasts where they can indulge in
+                the most exquisite bakery delights. With a passion for baking,
+                we're dedicated to crafting treats that not only satisfy your
+                taste buds but also bring a smile to your face. From the moment
+                you step into Injoy Treats, you'll be greeted by the enticing
+                aroma of freshly baked goods that have been crafted with care
+                and love. Our range includes a variety of delectable pastries,
+                cupcakes, cookies, and more, each made using the finest
+                ingredients and traditional recipes. Whether you're celebrating
+                a special occasion or simply want to treat yourself, Injoy
+                Treats is here to make every moment a memorable one with our
+                irresistible treats.
               </p>
             </div>
 
@@ -27,30 +34,22 @@ const About = () => {
               <h6>Categories</h6>
               <ul class="footer-links">
                 <li>
-                  <a href="http://scanfcode.com/category/c-language/">C</a>
+                  <a href="#">Cookies</a>
                 </li>
                 <li>
-                  <a href="http://scanfcode.com/category/front-end-development/">
-                    UI Design
-                  </a>
+                  <a href="#">Cakes</a>
                 </li>
                 <li>
-                  <a href="http://scanfcode.com/category/back-end-development/">
-                    PHP
-                  </a>
+                  <a href="#">Bread</a>
                 </li>
                 <li>
-                  <a href="http://scanfcode.com/category/java-programming-language/">
-                    Java
-                  </a>
+                  <a href="#">Pastries</a>
                 </li>
                 <li>
-                  <a href="http://scanfcode.com/category/android/">Android</a>
+                  <a href="#">Pies</a>
                 </li>
                 <li>
-                  <a href="http://scanfcode.com/category/templates/">
-                    Templates
-                  </a>
+                  <a href="#">Desserts</a>
                 </li>
               </ul>
             </div>
@@ -104,12 +103,12 @@ const About = () => {
                 </li>
                 <li>
                   <a className="dribbble" href="#">
-                    <FaDribbble />
+                    <FaTiktok />
                   </a>
                 </li>
                 <li>
                   <a className="linkedin" href="#">
-                    <FaLinkedin />
+                    <FaInstagram />
                   </a>
                 </li>
               </ul>
