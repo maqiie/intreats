@@ -1,8 +1,10 @@
 import React from "react";
 import backgroundImage from "../assets/background.jpg"; // Adjust the path as needed
 import "./Content.css"; // Import your CSS file
+import Category from "./Category";  
+import { Link } from "react-router-dom";
 
-const Content = () => {
+const Content = () => { 
   const contentStyle = {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "cover",
@@ -32,11 +34,12 @@ const Content = () => {
         </p>
         <br />
         <br></br>
-        <button class="button">
+        <Link to="/category" className="button">
+
           <div class="btn-circle"></div>
           <div class="btn-circle"></div>
           <p class="btn-text">CHECK OUR MENU</p>
-        </button>
+        </Link>
       </div>
     </div>
   );
