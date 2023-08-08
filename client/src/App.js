@@ -32,6 +32,7 @@ const App = () => {
           <Category />
           <Ad />
           <Newsletter />
+          <OrderForm/>
           <About />
         
         </div>

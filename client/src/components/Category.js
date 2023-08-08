@@ -1,11 +1,24 @@
-import React from "react";
+
 import IMG1 from "../assets/cake.jpg";
 import IMG2 from "../assets/doughnuts.jpg";
 import IMG3 from "../assets/maandazi.jpeg";
 import IMG4 from "../assets/pizza.jpg";
+import PopupMenu from "./PopupMenu";
+import React, { useState } from "react";
+
 import { Styles } from "./category.css";
 
 const Category = () => {
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+  };
+
   return (
     <div className="category w-full">
       <h1>Category of available items</h1>
@@ -51,10 +64,14 @@ const Category = () => {
       </div>
       <br />
       <div>
-        <button className="category-button">View Full Menu</button>
+        <button className="category-button" onClick={openPopup}>
+          View Full Menu
+        </button>
 
-        <br />
+        {isPopupOpen && <PopupMenu onClose={closePopup} />}
       </div>
+
+      <br />
     </div>
   );
 };

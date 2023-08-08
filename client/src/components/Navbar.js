@@ -44,13 +44,13 @@ const Navbar = () => {
         </a>
         </div>
         <div className="ml-auto flex">
-          <a className="ml-4" href="home">
+          <a className="ml-4" href="/">
             Home
           </a>
           <a className="ml-4" href="menu">
             Menu
           </a>
-          <a className="ml-4" href="about-us">
+          <a className="ml-4" href="/about">
             About
           </a>
           <a className="ml-4" href="contact-us">
