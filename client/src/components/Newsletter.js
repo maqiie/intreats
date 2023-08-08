@@ -3,6 +3,8 @@ import "./Newsletter.css";
 import cakeImage from "../assets/cake.jpg";
 import doughnutsImage from "../assets/doughnuts.jpg";
 import maandaziImage from "../assets/maandazi.jpeg";
+import OrderForm from "../Order";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -71,12 +73,12 @@ const ProductCard = ({ name, image, prices }) => {
 const Newsletter = () => {
   return (
     <div className="news">
-      <br></br>
-      <div className="flex-container">
+     <div className="flex-container">
         <h1 className="text-4xl font-bold">Order With Us Now</h1>
-        <a href="/OrderForm">
-          <p class="custom-link">make your custom Order</p>
-        </a>
+        {/* Use Link to navigate to OrderForm */}
+        <Link to="/OrderForm">
+          <p className="custom-link">make your custom Order</p>
+        </Link>
       </div>
 
       <br></br>
