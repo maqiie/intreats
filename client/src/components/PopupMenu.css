@@ -1,0 +1,49 @@
+.popup-menu {
+  /* Add styles to position the pop-up in the center of the screen */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Add other styles like background color, box-shadow, etc. */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for small screens */
+@media (max-width: 576px) {
+  .popup-menu {
+    /* Set popup to full width on small screens */
+    width: 100%;
+    max-width: none; /* Remove the maximum width constraint */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+/* Media query for medium screens */
+@media (min-width: 577px) and (max-width: 992px) {
+  .popup-menu {
+    /* Adjust popup width and positioning for medium screens */
+    width: 80%;
+    max-width: 400px; /* Set a maximum width if needed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Media query for large screens */
+@media (min-width: 993px) {
+  .popup-menu {
+    /* Adjust popup width and positioning for large screens */
+    width: 60%;
+    max-width: 600px; /* Set a maximum width if needed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
