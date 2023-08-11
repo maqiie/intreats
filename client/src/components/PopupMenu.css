@@ -12,6 +12,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+  max-height: 80vh; /* Adjust this value as needed */
+  overflow-y: auto; /* Add vertical scrollbar when content overflows */
 }
 
 .popup-menu h2 {
@@ -82,7 +84,7 @@
 }
 
 
-/* Media query for small screens */
+* Media query for small screens */
 @media (max-width: 576px) {
   .popup-menu {
     /* Adjust the popup to fill the screen on small screens */
@@ -92,6 +94,9 @@
     top: 0;
     left: 0;
     transform: none;
+
+    /* Adjust max-height to fit within the viewport */
+    max-height: 90vh; /* Adjust this value as needed */
   }
 }
 
@@ -105,6 +110,9 @@
     top: 0;
     left: 0;
     transform: none;
+
+    /* Adjust max-height to fit within the viewport */
+    max-height: 90vh; /* Adjust this value as needed */
   }
 }
 /* Media query for large screens */
