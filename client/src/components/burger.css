@@ -1,0 +1,45 @@
+.custom-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .custom-button.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .custom-button.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .custom-button.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  .bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: 0.3s;
+  }
+  
+
+
+
+
+  
+  @media (max-width: 767px) {
+    .md\\:hidden {
+      display: none !important;
+    }
+    .md\\:flex {
+      display: flex !important;
+    }
+  }
