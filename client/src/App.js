@@ -20,15 +20,7 @@ const App = () => {
         <div className="background" s>
           {/* <Socials /> */}
           <Navbar />
-          <div className="content-wrapper">
-            <Routes>
-              <Route path="/" element={<Content />} />
-              <Route path="/category" element={<Category />} />
-              <Route path="/OrderForm" element={<OrderForm />} />
-              
-              
-            </Routes>
-          </div>
+          <Content />
           <Category />
           <Ad />
           <Newsletter />
