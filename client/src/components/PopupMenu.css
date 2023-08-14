@@ -76,3 +76,38 @@ button:hover {
   background-color: #c0392b;
 }
 
+/* Media query for small screens */
+@media (max-width: 576px) {
+  .popup-menu {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+/* Media query for medium screens */
+@media (min-width: 577px) and (max-width: 992px) {
+  .popup-menu {
+    width: 100%;
+    max-width: none;
+    height: auto; /* Use automatic height for medium screens */
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+/* Media query for large screens */
+@media (min-width: 993px) {
+  .popup-menu {
+    width: 60%;
+    max-width: 600px;
+    height: auto; /* Use automatic height for large screens */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

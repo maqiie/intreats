@@ -1,0 +1,8 @@
+.containers {
+    width: auto;
+    /* background-image: url("../assets/background-image.jpg"); */
+    background-color: rgb(250, 250, 250);
+    background-size: cover;
+    background-position: center;
+  }
+  

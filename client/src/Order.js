@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
-
+import "./Order.css"
 const OrderForm = () => {
+  const [additionalDetails, setAdditionalDetails] = useState('');
   const [maandaziKg, setMaandaziKg] = useState(0);
   const [maandaziPiece, setMaandaziPiece] = useState(0);
   const [doughnutQty, setDoughnutQty] = useState(0);
   const [cakeKg, setCakeKg] = useState(0);
   const [customOrder, setCustomOrder] = useState('');
 
+
   const handleOrder = () => {
     const totalPrice =
       maandaziKg * 400 +
       maandaziPiece * 20 +
       doughnutQty * 400 +
-      cakeKg * /*price per kg*/ 100 + // Adjust the price per kg as needed for cakes
-      /* customOrder price calculation here */
-
+      cakeKg * 100 + // Adjust the price per kg as needed for cakes
+      // /* customOrder price calculation here */
+  
     // You can use this total price for further processing or display
     console.log('Total Price:', totalPrice);
   };
+  
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="containers mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-4">Order Form</h1>
 
       {/* Maandazi */}
@@ -87,6 +90,18 @@ const OrderForm = () => {
             id="custom-order"
             value={customOrder}
             onChange={(e) => setCustomOrder(e.target.value)}
+            className="border border-gray-400 px-2 py-1"
+          />
+        </label>
+      </div>
+      <div className="mb-4">
+        <h2 className="text-xl font-bold">Additional Details</h2>
+        <label htmlFor="additional-details" className="block">
+          Provide any additional details about your order:
+          <textarea
+            id="additional-details"
+            value={additionalDetails}
+            onChange={(e) => setAdditionalDetails(e.target.value)}
             className="border border-gray-400 px-2 py-1"
           />
         </label>
