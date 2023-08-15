@@ -33,24 +33,39 @@ const Navbar = () => {
           </a>
         </div>
         <div className="ml-auto md:hidden">
-        <button className={`ml-4 custom-button ${showMenu ? "active" : ""}`} onClick={toggleMenu}>
-  <span className="bar"></span>
-  <span className="bar"></span>
-  <span className="bar"></span>
-</button>
+          <button
+            className={`ml-4 custom-button ${showMenu ? "active" : ""}`}
+            onClick={toggleMenu}
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
 
           {showMenu && (
             <div className="absolute top-16 right-0 mt-2 py-2 w-48 bg-white border rounded shadow-lg md:hidden">
-              <a className="block px-4 py-2 text-gray-800 hover:bg-gray-100" href="/">
+              <a
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                href="/"
+              >
                 Home
               </a>
-              <a className="block px-4 py-2 text-gray-800 hover:bg-gray-100" href="menu">
+              <a
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                href="menu"
+              >
                 Menu
               </a>
-              <a className="block px-4 py-2 text-gray-800 hover:bg-gray-100" href="/about">
+              <a
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                href="/about"
+              >
                 About
               </a>
-              <a className="block px-4 py-2 text-gray-800 hover:bg-gray-100" href="contact-us">
+              <a
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                href="contact-us"
+              >
                 Contact
               </a>
             </div>
@@ -62,5 +77,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
