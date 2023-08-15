@@ -57,11 +57,8 @@ import React, { useState, useEffect } from "react";
 import Typed from "typed.js";
 import backgroundImage from "../assets/background.jpg"; // Adjust the path as needed
 import "./Content.css"; // Import your CSS file
-import Category from "./Category";
 
 const Content = () => {
-  const [showCategory, setShowCategory] = useState(false);
-
   useEffect(() => {
     const options = {
       strings: [
@@ -74,7 +71,6 @@ const Content = () => {
       showCursor: true, // Show the blinking cursor
       cursorChar: "_", // Customize the cursor character
     };
-    
 
     const typed = new Typed(".typed-text", options);
 
@@ -82,10 +78,6 @@ const Content = () => {
       typed.destroy();
     };
   }, []);
-
-  const toggleCategory = () => {
-    setShowCategory(!showCategory);
-  };
 
   const contentStyle = {
     backgroundImage: `url(${backgroundImage})`,
@@ -113,17 +105,6 @@ const Content = () => {
           "Welcome to Injoy Treats, where our baked goods are made with passion,
           precision, and a sprinkle of happiness."
         </p>
-        <br />
-        <br />
-        {!showCategory ? (
-          <button className="button" onClick={toggleCategory}>
-            <div className="btn-circle"></div>
-            <div className="btn-circle"></div>
-            <p className="btn-text">CHECK OUR MENU</p>
-          </button>
-        ) : (
-          <Category />
-        )}
       </div>
     </div>
   );
