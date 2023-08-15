@@ -9,6 +9,7 @@
   background-image: url("../assets/background-image.jpg"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
+  overflow: auto;
 }
 
 /* Rest of the CSS styles remain the same */
@@ -24,11 +25,15 @@
   margin-bottom: 20px;
   border-bottom: 1px solid #eee;
   padding-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Stack menu items vertically */
+  align-items: flex-start;
 }
 
 .item-details {
   display: flex;
   align-items: center;
+  flex-direction: column; 
 }
 
 .menu-item-image {
@@ -86,6 +91,12 @@ button:hover {
     left: 0;
     transform: none;
   }
+  .menu-item-name {
+    font-size: 1em;
+  }
+  .menu-item-price {
+    font-size: 0.9em;
+  }
 }
 
 /* Media query for medium screens */
@@ -111,3 +122,4 @@ button:hover {
     transform: translate(-50%, -50%);
   }
 }
+

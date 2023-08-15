@@ -28,7 +28,7 @@ const Content = () => {
           WHENEVER WE BAKE, BAKE WITH OUR HEART
         </p>
         <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
-        <p className="theme text-gray-500 dark:text-white font-bold text-4xl text-center">
+        <p className="theme text-white dark:text-white font-bold text-4xl text-center">
           "InJoy: Delighting Taste Buds, One Sweet Surprise at a Time!"
         </p>
         <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
