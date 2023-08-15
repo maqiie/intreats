@@ -23,7 +23,8 @@ const OrderForm = () => {
   
 
   return (
-    <div className="containers mx-auto px-4 py-8">
+    <div className='back'>
+<div className="containers mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-4">Order Form</h1>
 
       {/* Maandazi */}
@@ -114,7 +115,15 @@ const OrderForm = () => {
       >
         Place Order
       </button>
+      {/* {totalPrice > 0 && (
+        <div className="total-price">
+          <h2 className="text-xl font-bold mt-4">Total Price:</h2>
+          <p>{totalPrice} USD</p>
+        </div>
+      )} */}
     </div>
+    </div>
+    
   );
 };
 
